@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script>
+        // Verificar si se ha reiniciado la página
+        if (performance.navigation.type === 1) {
+            // Redirigir a la página de inicio de sesión
+            window.location.href = "inicio.html";
+        }
+    </script>
+    
+    <form id="loginForm">
+
+        <center><img src="img/logo_negocio.png" alt=""></center>
+
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <button class="neon-button" type="submit">Ingresar</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

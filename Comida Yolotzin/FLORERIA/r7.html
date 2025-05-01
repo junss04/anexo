@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yolitzin</title>
+    <link rel="stylesheet" href="ramo.css">
+    <link rel="icon" href="img/icono.png" type="image/png" sizes="20x20">
+</head>
+
+<body>
+
+
+    <div id="holas">
+
+        <img src="img/logo_negocio.png" alt="" sizes="16x16">
+        <h1>Yolitzin</h1>
+    </div>
+
+
+
+
+
+    <header>
+        <nav>
+            <ul>
+
+                <!--Empezamos con nuestro menu o barra de navegación-->
+
+                <li><a href="floreria.html">Inicio</a></li>
+                <li><a href="flores.html">Flores</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="info.html">Acerca de Nosotros</a></li>
+                <li><a href="carta.html">Carta para la persona</a></li>
+            </ul>
+
+        </nav>
+    </header>
+    <h2>Comidas y bebidas</h2>
+
+    <div class="container">
+        <img src="img/ramo7.jpg" alt="Imagen">
+        <p>Cautiva los sentidos de tus seres queridos con nuestros
+           platillos y deleita tu paladar</p>
+
+
+
+        <br>
+    </div>
+    <button onclick="comprar()">Comprar</button>
+    <button onclick="reservar()">Reservar</button>
+
+    <p id="mensaje"></p>
+
+    <script>
+        function comprar() {
+            var respuesta = confirm("Confirme su compra");
+            if (respuesta == true) {
+                alert("¡Muchas gracias por su compra!");
+            } else {
+                alert("Ha cancelado su compra");
+            }
+        }
+
+        function reservar() {
+            alert("Ha realizado la reserva de este producto, por favor comuniquese pronto para confirmar su compra");
+        }
+
+    </script>
+
+
+
+
+    <!--Estrellas de reseña-->
+    <br>
+    <h4>Reseña acerca del ramo</h4>
+    <div class="rating" id="rating">
+        <span class="star" data-value="1">&#9733;</span>
+        <span class="star" data-value="2">&#9733;</span>
+        <span class="star" data-value="3">&#9733;</span>
+        <span class="star" data-value="4">&#9733;</span>
+        <span class="star" data-value="5">&#9733;</span>
+    </div>
+    <br>
+    <p>Número de estrellas: </p>
+    <p id="rating_value">0</p>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const stars = document.querySelectorAll('.star');
+            let currentValue = 0;
+
+            stars.forEach(function (star) {
+                star.addEventListener('click', function () {
+                    currentValue = this.getAttribute('data-value');
+                    highlightStars(currentValue);
+                    document.getElementById('rating_value').innerText = currentValue;
+                });
+
+                star.addEventListener('mouseover', function () {
+                    resetStars();
+                    let value = this.getAttribute('data-value');
+                    highlightStars(value);
+                });
+
+                star.addEventListener('mouseout', function () {
+                    highlightStars(currentValue); F
+                });
+            });
+
+            function resetStars() {
+                stars.forEach(function (star) {
+                    star.classList.remove('active');
+                });
+            }
+
+            function highlightStars(value) {
+                stars.forEach(function (star) {
+                    if (star.getAttribute('data-value') <= value) {
+                        star.classList.add('active');
+                    }
+                });
+            }
+        });
+
+    </script>
+</body>
+
+</html>

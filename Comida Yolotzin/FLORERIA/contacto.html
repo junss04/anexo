@@ -1,0 +1,133 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Yolitzin</title>
+        <link rel="stylesheet" href="ramo.css">
+        <link rel="icon" href="img/icono.png" type="image/png" sizes="20x20">
+    </head>
+
+    <body>
+
+        <div id="holas">
+
+            <img src="img/logo_negocio.png" alt="" sizes="16x16">
+            <h1>Comida mexicana Yolitzin</h1>
+        </div>
+
+
+
+        <header>
+            <nav>
+            <ul>
+
+                <!--Empezamos con nuestro menu o barra de navegación-->
+
+                <li><a href="floreria.html">Inicio</a></li>
+                <li><a href="flores.html">Comida</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="info.html">Acerca de Nosotros</a></li>
+                <li><a href="carta.html">Reseñas</a></li>
+                <li id="logout"><a href="inicio.html">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+        </header>
+
+
+
+
+
+
+    <h1>Esta es la informacion de contacto</h1>
+
+    <style>
+        .contact-info {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .contact-info {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .contact-info h2 {
+            margin-top: 0;
+        }
+
+        .phone-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .phone-form input,
+        .phone-form button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        .phone-form button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+        }
+
+        .phone-form button:hover {
+            background-color: #218838;
+        }
+    </style>
+    <script>
+        function showConfirmation() {
+            const phoneInput = document.getElementById('phone');
+            const confirmationSection = document.getElementById('confirmation-section');
+            const phoneNumber = phoneInput.value.trim();
+
+            if (phoneNumber === '') {
+                alert('Por favor, ingrese un número telefónico.');
+            } else {
+                confirmationSection.innerHTML = `
+                    <p>¿Es correcto este número de teléfono?: <strong>${phoneNumber}</strong></p>
+                    <button onclick="confirmPhoneNumber()">Confirmar</button>
+                `;
+            }
+        }
+
+        function confirmPhoneNumber() {
+            alert('Número telefónico confirmado.');
+            document.getElementById('phone').value = '';
+            document.getElementById('confirmation-section').innerHTML = '';
+        }
+    </script>
+    </head>
+
+    <body>
+        <div class="contact-info">
+            <h2>Información de Contacto - "Comida mexicana Yolitzin"</h2>
+            <p>Dirección: Colonia Revolución, Carretera Tejupilco - Amatepec Km3.2 S/N, 51412 Tejupilco de Hidalgo, Méx.</p>
+            <p>Teléfono: (555) 123-4567</p>
+            <p>Correo Electrónico: comidaYolitzin@gmil.com</p>
+        </div>
+
+        <div class="phone-form">
+            <h3>Ingresa tu Número Telefónico</h3>
+            <input type="text" id="phone" placeholder="Número telefónico">
+            <button type="button" onclick="showConfirmation()">Ingresar</button>
+            <div id="confirmation-section"></div>
+        </div>
+    </body>
+
+</html>

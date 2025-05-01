@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yolitzin</title>
+    <link rel="stylesheet" href="ramo.css">
+    <link rel="icon" href="img/barra.jpg" type="image/png" sizes="20x20">
+</head>
+
+<body>
+    <script>
+        // Verificar si se ha reiniciado la página
+        if (performance.navigation.type === 1) {
+            // Redirigir a la página de inicio de sesión
+            window.location.href = "inicio.html";
+        }
+    </script>
+
+
+    <style>
+        /* Aplica la imagen de fondo al textarea */
+        textarea {
+            background-image: url('img/carta.jpg');
+            background-size: cover;
+            /* Ajusta la imagen al tamaño del textarea */
+            /* Otros estilos como tamaño de fuente, color, etc. */
+        }
+
+        button {
+            background-image: url(img/fondo.jpg);
+            object-fit: cover;
+
+            padding: 25px 50px;
+            /* Ajusta el tamaño del botón aumentando los valores de padding */
+            font-size: 20px;
+            /* Ajusta el tamaño del texto del botón */
+            border: 1px;
+
+            color: black;
+            /* Color del texto del botón */
+            border: none;
+            /* Elimina el borde del botón */
+            border-radius: 20px;
+            /* Agrega bordes redondeados al botón */
+            cursor: pointer;
+            /* Cambia el cursor al pasar sobre el botón */
+
+            background-color: aqua;
+        }
+    </style>
+
+    <div id="holas">
+
+        <img src="img/logo_negocio.png" alt="" sizes="16x16">
+        <h1>Yolitzin</h1>
+    </div>
+
+
+
+
+
+    <header>
+        <nav>
+            <ul>
+    
+                <!--Empezamos con nuestro menu o barra de navegación-->
+        
+                <li><a href="floreria.html">Inicio</a></li>
+                <li><a href="flores.html">Menú</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="info.html">Acerca de Nosotros</a></li>
+                <li><a href="carta.html">Nota al mesero</a></li>
+                <li id="logout"><a href="inicio.html">Cerrar Sesión</a></li>
+              </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <h2><label for="">Redacte su carta </label></h2>
+    <input type="text" id="myInput" placeholder="Escribe algo aquí">
+    <br><br>
+    <div id="florr">
+        <button onclick="copyText()">Enviar</button>
+    </div>
+
+    <br>
+
+    <center><textarea id="myTextarea" rows="4" cols="50"></textarea></center>
+
+
+    <script>
+        function copyText() {
+            // Obtén el valor del input
+            var inputText = document.getElementById("myInput").value;
+
+            // Asigna el valor al textarea
+            document.getElementById("myTextarea").value = inputText;
+        }
+    </script>
+
+
+</body>
+
+</html>

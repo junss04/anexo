@@ -1,0 +1,188 @@
+/*Primero estableceremos parametros generales usando el asterisco
+uniendo un padding y un margn 0*/
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/*Lo siguiente es para personalizar el titulo*/
+h1 {
+
+    text-align: center;
+
+}
+
+img {
+    width: 200px;
+    /*Es para el ancho */
+    height: 200px;
+    /*ALTURA para que sea cuadrada*/
+    border-radius: 20%;
+    /*Esta linea hara redonda a la imagen,
+    si la imagen se deforma podemos utilizar la siguyientes linea de codigo para solucionar ese problema:*/
+
+    object-fit: cover;
+}
+
+
+/*AQUI EMPEZAMO A CODIFICA LO DE LA BARRA DE NAVEGACION*/
+
+nav li {
+    /*Esto hara que los elementos de la lista aparezcan en una misma linea*/
+    display: inline-flex;
+
+}
+
+nav a {
+    /*Color de la letra de la barra de navegacion*/
+
+    text-decoration: none;
+    color: green;
+    padding: 10px;
+    width: 150px;
+}
+
+nav li:hover {
+    /*Color a la hora de estar seleccionando alguna de las opciones */
+    background-color: #cfc8ad;
+
+}
+
+nav ul {
+    /*Color de fondo de la barra de navegacion*/
+    text-align: center;
+    background-color: #afa98f;
+}
+
+#holas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(img/barra.jpg);
+    background-size: cover;
+    /* Ajuste para mostrar la imagen en todo el div */
+}
+
+body {
+    background-color: #efe8cc;
+}
+
+#producto {
+
+    width: 200px;
+    /*Es para el ancho */
+    height: 200px;
+    /*ALTURA para que sea cuadrada*/
+    border-radius: 50%;
+    /*Esta linea hara redonda a la imagen,
+    si la imagen se deforma podemos utilizar la siguyientes linea de codigo para solucionar ese problema:*/
+
+    object-fit: cover;
+}
+
+
+/* Estilo para el área de texto */
+textarea {
+    font-family: "Brush Script MT", cursive;
+    /* Cambia la fuente del texto */
+    font-size: 75px;
+    /* Tamaño de letra */
+    width: 700px;
+    /* Ancho del área de texto */
+    height: 300px;
+    /* Altura del área de texto */
+    border-radius: 35px;
+
+}
+
+#ram1 {
+    width: 500px;
+    height: 500px;
+    border-radius: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    object-fit: cover;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3b382e;
+    font-size: 20px;
+}
+
+#ram2 {
+    width: 500px;
+    height: 500px;
+    border-radius: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    object-fit: cover;
+
+}
+
+#myInput {
+    width: 300px;
+    height: 50px;
+    border-radius: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    object-fit: cover;
+}
+
+#florr {
+    width: 100px;
+    height: 100px;
+    border-radius: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+button:hover {
+    background-color: #FDFD96;
+}
+
+.container {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+
+    .container {
+        margin: 150px auto;
+        width: 70%;
+
+    }
+
+    img {
+        max-width: 320px;
+        float: left;
+        border: 3px solid black;
+        margin-right: 15px;
+        width: 200px;
+        height: 200px;
+
+    }
+}
+
+p {
+    text-align: justify;
+}
+
+/*Codigo para las estrellas de la reseña*/
+
+.rating {
+    font-size: 30px;
+}
+
+.star {
+    cursor: pointer;
+    color: #ccc;
+    transition: color 0.2s;
+}
+
+.star.active,
+.star:hover {
+    color: gold;
+}

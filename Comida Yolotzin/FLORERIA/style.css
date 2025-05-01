@@ -1,0 +1,265 @@
+/*Primero estableceremos parametros generales usando el asterisco
+uniendo un padding y un margn 0*/
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+/*AQUI EMPEZAMO A CODIFICA LO DE LA BARRA DE NAVEGACION*/
+
+nav li {
+    /*Esto hara que los elementos de la lista aparezcan en una misma linea*/
+    display: inline-flex;
+
+}
+
+nav a {
+    /*Color de la letra de la barra de navegacion*/
+
+    text-decoration: none;
+    color: green;
+    padding: 10px;
+    width: 150px;
+}
+
+nav li:hover {
+    /*Color a la hora de estar seleccionando alguna de las opciones */
+    background-color: #cfc8ad;
+
+}
+
+nav ul {
+    /*Color de fondo de la barra de navegacion*/
+    text-align: center;
+    background-color: #afa98f;
+}
+
+#holas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(img/barra.jpg);
+    background-size: cover;
+    /* Ajuste para mostrar la imagen en todo el div */
+}
+
+/*Lo siguiente es para personalizar el titulo*/
+h1 {
+
+    text-align: center;
+    
+}
+
+img {
+    width: 200px;
+    /*Es para el ancho */
+    height: 200px;
+    /*ALTURA para que sea cuadrada*/
+    border-radius: 50%;
+    /*Esta linea hara redonda a la imagen,
+    si la imagen se deforma podemos utilizar la siguyientes linea de codigo para solucionar ese problema:*/
+
+    object-fit: cover;
+}
+
+
+/*AQUI EMPEZAMO A CODIFICA LO DE LA BARRA DE NAVEGACION*/
+#menu{
+    position: fixed; /* Fija la barra de navegación en la parte superior */
+    top: 0;
+    width: 100%;
+}
+nav li {
+    /*Esto hara que los elementos de la lista aparezcan en una misma linea*/
+    display: inline-flex;
+
+}
+
+nav a {
+    /*Color de la letra de la barra de navegacion*/
+
+    text-decoration: none;
+    color: green;
+    padding: 10px;
+    width: 150px;
+}
+
+nav li:hover {
+    /*Color a la hora de estar seleccionando alguna de las opciones */
+    background-color: #cfc8ad;
+
+}
+
+nav ul {
+    /*Color de fondo de la barra de navegacion*/
+    text-align: center;
+    background-color: #afa98f;
+}
+
+#holas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(img/barra.jpg);
+    background-size: cover;
+    /* Ajuste para mostrar la imagen en todo el div */
+}
+
+body {
+    background-color: #efe8cc;
+}
+
+#producto {
+
+    width: 200px;
+    /*Es para el ancho */
+    height: 200px;
+    /*ALTURA para que sea cuadrada*/
+    border-radius: 50%;
+    /*Esta linea hara redonda a la imagen,
+    si la imagen se deforma podemos utilizar la siguyientes linea de codigo para solucionar ese problema:*/
+
+    object-fit: cover;
+}
+
+
+/* Estilo para el área de texto */
+textarea {
+    font-family:Arial, Helvetica, sans-serif;
+    /* Cambia la fuente del texto */
+    font-size: 75px;
+    /* Tamaño de letra */
+    width: 700px;
+    /* Ancho del área de texto */
+    height: 300px;
+    /* Altura del área de texto */
+    border-radius: 35px;
+
+}
+
+#ram1 {
+    width: 700px;
+    height: 300px;
+    border-radius: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    object-fit: cover;
+}
+
+#reinicios {
+    font-family: "Brush Script MT", cursive;
+    /* Cambia la fuente del texto */
+    font-size: 75px;
+    /* Tamaño de letra */
+    width: 20px;
+    /* Ancho del área de texto */
+    height: 20px;
+    /* Altura del área de texto */
+    border-radius: 35px;
+    object-fit: cover;
+
+
+}
+
+button:hover {
+    background-color: #FDFD96;
+}
+
+#myInput {
+    width: 50%;
+    height: 2em;
+}
+
+#loginForm {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 100px;
+    background-image: url(img/barra.jpg);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(233, 163, 163, 0.1);
+}
+
+#loginForm label {
+    display: block;
+    margin-bottom: 5px;
+    color: black;
+}
+
+#loginForm input[type="text"],
+#loginForm input[type="password"] {
+    width: calc(100% - 22px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#loginForm button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #E493B3;
+    color: black;
+    cursor: pointer;
+}
+
+#loginForm button:hover {
+    background-color: #B5C0D0;
+}
+
+
+
+.neon-button {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #B5C0D0;
+    color: black;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.neon-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #FDFD96;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 2;
+    color: black;
+}
+
+.neon-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300%;
+    height: 300%;
+    background: #B5C0D0;
+    opacity: 0;
+    transition: opacity 0.4s ease, width 0.4s ease, height 0.4s ease;
+    border-radius: 50%;
+    z-index: 1;
+
+}
+
+.neon-button:hover::before,
+.neon-button:hover::after {
+    opacity: 0.4;
+    ;
+}
+
+
+
