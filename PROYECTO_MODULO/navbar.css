@@ -1,0 +1,107 @@
+/* navbar.css */
+
+/* Estilos para la barra de navegación */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #2c3e50; /* Color de fondo más atractivo */
+    color: white;
+    padding: 15px 20px; /* Espaciado consistente */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+    z-index: 1000;
+    display: flex; /* Usando flexbox para alinear elementos */
+    justify-content: space-between; /* Espacio entre logo y enlaces */
+    align-items: center; /* Centrado verticalmente */
+    transition: background-color 0.3s; /* Transición suave al desplazarse */
+}
+
+.navbar.scrolled {
+    background-color: #34495e; /* Cambio de color al desplazarse */
+}
+
+.navbar .logo img {
+    height: 50px; /* Aumento de la altura del logo */
+    transition: transform 0.3s; /* Transición suave para el logo */
+}
+
+.navbar .logo img:hover {
+    transform: scale(1.1); /* Efecto de aumento al pasar el ratón */
+}
+
+.navbar .nav-links {
+    list-style: none; /* Sin viñetas */
+    margin: 0; /* Sin márgenes */
+    padding: 0; /* Sin padding */
+    display: flex; /* Usando flexbox para los enlaces */
+}
+
+.navbar .nav-links li {
+    margin-left: 30px; /* Mayor separación entre enlaces */
+    position: relative; /* Para efectos de pseudo-elementos */
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px; /* Tamaño de fuente aumentado */
+    font-weight: 600; /* Grosor de la fuente para mayor legibilidad */
+    padding: 8px 10px; /* Espaciado interno en los enlaces */
+    border-radius: 5px; /* Bordes redondeados para los enlaces */
+    transition: color 0.3s, background-color 0.3s; /* Transiciones suaves */
+}
+
+.navbar .nav-links a:hover {
+    color: #302812; /* Color al pasar el ratón */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo al pasar el ratón */
+}
+
+.navbar .nav-links li::after {
+    content: ''; /* Pseudo-elemento para el subrayado */
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #f6e3b2; /* Color del subrayado */
+    color: aliceblue;
+    transition: width 0.3s; /* Transición suave para el subrayado */
+    position: absolute;
+    left: 50%;
+    bottom: -5px; /* Espaciado del subrayado */
+    transform: translateX(-50%); /* Centrar el subrayado */
+}
+
+.navbar .nav-links li:hover::after {
+    width: 100%; /* Expande el subrayado al pasar el ratón */
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 600px) {
+    .navbar .nav-links {
+        flex-direction: column; /* Cambiar a columna en móvil */
+        align-items: center; /* Centrados */
+        display: none; /* Oculto inicialmente */
+        background-color: #34495e; /* Fondo del menú móvil */
+        position: absolute; /* Posición absoluta para el menú */
+        top: 60px; /* Colocarlo justo debajo de la barra */
+        left: 0;
+        right: 0;
+        padding: 20px 0; /* Espaciado interno */
+        z-index: 999; /* Asegurarse de que está por encima de otros elementos */
+    }
+
+    .navbar.active .nav-links {
+        display: flex; /* Mostrar en menú móvil */
+    }
+
+    .navbar .nav-toggle {
+        display: block; /* Botón de menú */
+        cursor: pointer;
+    }
+
+    .navbar .nav-toggle:after {
+        content: '☰'; /* Icono de menú */
+        font-size: 24px; /* Tamaño del icono */
+        color: white; /* Color del icono */
+        margin-left: 10px; /* Separación del texto */
+    }
+}
